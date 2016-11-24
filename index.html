@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="table">
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    
+    
+</head>
+<body ng-controller="myCtrl">
+    
+    <table ng-table="tableParams" class="table table-condensed table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Series</th>
+                <th>First Name</th>
+                <th>Age</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tr ng-repeat="row in $data">
+            <td title="id" filter="{id: 'text'}" sortable="name" style="height:25px;">
+            {{row.id}}
+            </td>
+            <td title="name" filter="{name: 'text'}" sortable="name">
+            {{row.primary.name}}
+            </td>
+            <td title="age" filter="{age: 'number'}" sortable="age">
+            {{row.primary.age}}
+            </td>
+            <td title="name" filter="{name: 'text'}" sortable="name">
+            {{row.secondary.name}}
+            </td>
+            <td title="age" filter="{age: 'number'}" sortable="age">
+            {{row.secondary.age}}
+            </td>
+        </tr>
+    
+    </table>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/ng-table.js"></script>
+    <script src="app.js"></script>
+    <script src="mainCtrl.js"></script>
+</body>
+    
+</html>
