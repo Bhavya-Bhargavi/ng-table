@@ -1,0 +1,19 @@
+{
+  "name": "bhavya",
+  "version": "1.6.0",
+  "description": "testing",
+  "main": "angular",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "HTML",
+    "Angular"
+  ],
+  "author": "bhavya",
+  "license": "ISC"
+}
